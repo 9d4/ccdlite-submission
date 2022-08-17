@@ -1,0 +1,21 @@
+{
+  "name": "ccdlite-submission",
+  "version": "1.0.0",
+  "description": "CCDLITE Submission",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "Dimas Ananda <traperwaze@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.4",
+    "sass": "^1.54.4",
+    "vite": "^2.8.6"
+  }
+}
