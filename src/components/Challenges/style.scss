@@ -1,0 +1,23 @@
+.challenge-item {
+  padding: 16px;
+  background-color: #183b4a;
+  border-radius: 16px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 16px;
+
+  .title {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    margin: 0;
+  }
+}
+
+.challenge-item:hover {
+  background-color: #0c4258;
+}
