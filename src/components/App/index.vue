@@ -1,4 +1,5 @@
 <script setup>
+document.body.classList.add('dark');
 </script>
 
 <template>
@@ -8,5 +9,5 @@
 </template>
 
 <style lang="scss">
-@import "./style.scss";
+@import './style.scss';
 </style>
