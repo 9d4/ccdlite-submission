@@ -3,7 +3,8 @@ export default {
   props: ['challenge'],
   methods: {
     chalOnClick(chalcode) {
-      console.log(chalcode);
+      const target = `/ch/${chalcode}`;
+      this.$router.push(target)
     },
   },
 };

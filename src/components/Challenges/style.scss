@@ -21,3 +21,48 @@
 .challenge-item:hover {
   background-color: #0c4258;
 }
+
+.challenge-single {
+  input {
+    background-color: #183b4a;
+    border: none;
+    border-radius: 8px;
+    color: #f3f3f3;
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+    background-color: #183b4a;
+    border: none;
+    border-radius: 8px;
+    color: #f3f3f3;
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .submit-container {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      background-color: #183b4a;
+      color: #f3f3f3;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: #0c4258;
+      cursor: pointer;
+    }
+
+    button:active {
+      background-color: #072936;
+    }
+  }
+}
