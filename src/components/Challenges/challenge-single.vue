@@ -14,7 +14,7 @@ export default {
       answer: '',
       detail: '',
       sending: false,
-      disabled: true,
+      disabled: false,
     };
   },
   methods: {
@@ -23,23 +23,23 @@ export default {
     },
     submitForm() {
       this.sending = true;
-      const web3formUrl = 'https://api.web3forms.com/submit';
+      const formAction = 'https://formspree.io/f/mzbwbonw';
+
+      const formData = new FormData();
+      formData.append('subject', `CCDLITE Submission - ${this.challenge.code}`);
+      formData.append('name', this.name);
+      formData.append('class', this.clas);
+      formData.append('answer', this.answer);
+      formData.append('detail', this.detail);
+      formData.append('whatsapp', this.phone);
 
       axios({
-        url: web3formUrl,
+        url: formAction,
         method: 'POST',
         headers: {
-          'Content-type': 'application/json',
+          'Content-type': 'application/x-www-form-urlencoded',
         },
-        data: {
-          access_key: '389ac69b-796e-4c3d-9f08-99ebd5907b2e',
-          subject: `CCDLITE Submission - ${this.challenge.code}`,
-          name: this.name,
-          class: this.clas,
-          answer: this.answer,
-          detail: this.detail,
-          whatsapp: this.phone,
-        },
+        data: formData,
       })
         .then((res) => {
           if (res.status == 200) {
