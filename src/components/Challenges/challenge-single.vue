@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       challenge: {},
-      phone: '',
+      phone: null,
       name: '',
       clas: '',
       answer: '',
@@ -25,13 +25,14 @@ export default {
       this.sending = true;
       const formAction = 'https://formspree.io/f/mzbwbonw';
 
+      const self = this;
       const formData = new FormData();
       formData.append('subject', `CCDLITE Submission - ${this.challenge.code}`);
-      formData.append('name', this.name);
-      formData.append('class', this.clas);
-      formData.append('answer', this.answer);
-      formData.append('detail', this.detail);
-      formData.append('whatsapp', this.phone);
+      formData.append('name', self.name);
+      formData.append('class', self.clas);
+      formData.append('answer', self.answer);
+      formData.append('detail', self.detail);
+      formData.append('whatsapp', self.phone);
 
       axios({
         url: formAction,
