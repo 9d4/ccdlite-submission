@@ -5,18 +5,16 @@ import axios from 'axios';
 
 <script>
 export default {
-  data() {
-    return {
-      challenge: {},
-      phone: null,
-      name: '',
-      clas: '',
-      answer: '',
-      detail: '',
-      sending: false,
-      disabled: false,
-    };
-  },
+  data: () => ({
+    challenge: {},
+    phone: '',
+    name: '',
+    clas: '',
+    answer: '',
+    detail: '',
+    sending: false,
+    disabled: false,
+  }),
   methods: {
     findChallengeByChalCode(chalcode) {
       return challenges.find((chal) => chal.code == chalcode);
