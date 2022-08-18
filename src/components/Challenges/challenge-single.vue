@@ -14,6 +14,7 @@ export default {
       answer: '',
       detail: '',
       sending: false,
+      disabled: true,
     };
   },
   methods: {
@@ -70,7 +71,9 @@ export default {
     <h2>{{ challenge.name }}</h2>
     <p>{{ challenge.description || 'No description' }}</p>
 
-    <form @submit.prevent="submitForm" v-if="!sending">
+    <div v-if="disabled">Submission temporarily disabled!</div>
+
+    <form @submit.prevent="submitForm" v-if="!sending && !disabled">
       <input
         type="number"
         name="email"
