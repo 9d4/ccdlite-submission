@@ -14,7 +14,7 @@ export default {
       answer: '',
       detail: '',
       sending: false,
-      disabled: true,
+      disabled: false,
     };
   },
   methods: {
